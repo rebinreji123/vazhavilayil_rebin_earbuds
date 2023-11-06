@@ -1,0 +1,12 @@
+.image-placeholder {
+    background-color: black; /* Black background */
+    color: yellow; /* Yellow text */
+    width: 100%; /* Full width of the container */
+    height: 200px; /* Fixed height, you can adjust this as needed */
+    display: flex;
+    justify-content: center; /* Center the text horizontally */
+    align-items: center; /* Center the text vertically */
+    font-size: 2em; /* Increase the text size */
+    margin: 20px 0; /* Add some margin to the top and bottom */
+  }
+  

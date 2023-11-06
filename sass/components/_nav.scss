@@ -1,0 +1,109 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, h1, ul, li, a, button {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header and Navigation Styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000; /* Primary color: black */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight adjustment for visibility on black */
+  }
+  
+  .product-title {
+    color: #fff; /* Tertiary color: white */
+    font-size: 24px;
+  }
+  
+  .navbar {
+    position: relative;
+  }
+  
+  .nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-item {
+    text-decoration: none;
+    color: #fff; /* Tertiary color: white */
+    font-size: 16px;
+    padding: 7px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .nav-item:hover,
+  .nav-item:focus {
+    background-color: #ffeb3b; /* Secondary color: yellow */
+    color: #000; /* Text color changes to black for contrast */
+  }
+  
+  /* Active link simulation */
+  .nav-item.active {
+    background-color: #ffeb3b; /* Secondary color: yellow */
+    color: #000; /* Text color changes to black for contrast */
+  }
+  
+  .buy-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .price {
+    margin-right: 10px;
+    color: #ffeb3b; /* Secondary color: yellow */
+    font-size: 18px;
+  }
+  
+  .buy-button {
+    background-color: #ffeb3b; /* Secondary color: yellow */
+    color: #000; /* Text color changes to black for contrast */
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .buy-button:hover {
+    background-color: #ffd600; /* A darker shade of yellow */
+    color: #000;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .nav-list {
+        margin-top: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .nav-item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+  
+    .buy-section {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+  }
+  
+
