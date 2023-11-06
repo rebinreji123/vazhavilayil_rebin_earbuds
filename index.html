@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ear Echo</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/grid.css">
+</head>
+<body>
+    <main class="product-showcase">
+        <body class="buy-nav">
+            <header class="header">
+                <h1 class="product-title">Echo Buds Pro</h1>
+                <nav class="navbar">
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-item">Overview</a></li>
+                        <li><a href="#" class="nav-item">Tech Specs</a></li>
+                        <li><a href="#" class="nav-item">Compare</a></li>
+                    </ul>
+                </nav>
+                <div class="buy-section">
+                    <span class="price">CA$259.99</span>
+                    <button class="buy-button">Buy</button>
+                </div>
+            </header>
+        </body>
+        <div class="product-image">
+            <!-- Placeholder for the product image or a 3D viewer -->
+        </div>
+        
+          
+    </main>
+    
+        <!-- <model-viewer> HTML element -->
+            <model-viewer src="./images/earbuds.gltf" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1">
+                <button class="Hotspot" slot="hotspot-1"  data-position="1.3684467188928273m 4.781632238024851m 0.7403323027633899m" data-normal="0.9859793187841557m 0.11124992603219083m -0.12437136683241994m" data-visibility-attribute="visible"><div class="HotspotAnnotation" id="hotspot-1"></div></button>
+                <button class="Hotspot" slot="hotspot-2" data-position="-0.5238635782065331m 5.7170562509662535m 0.40416486116639794m" data-normal="-0.99619469881847m 3.436996526846709e-8m -0.08715573444115395m" data-visibility-attribute="visible"><div class="HotspotAnnotation" id="hotspot-2"></div></button>
+                <button class="Hotspot" slot="hotspot-3" data-position="0.5541008374184258m 6.59120785892993m 0.4340236480847406m" data-normal="0.9900138839978427m 0.11094412998424433m 0.08697073941013432m" data-visibility-attribute="visible"><div class="HotspotAnnotation" id="hotspot-3"></div></button>
+                <button class="Hotspot" slot="hotspot-4"  data-position="0.07643412450733311m 6.553903748871598m 1.5020622846626779m" data-normal="0.4153203686866182m 0.3277165881842795m 0.8485934416331928m" data-visibility-attribute="visible"><div class="HotspotAnnotation" id="hotspot-4"></div></button>
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+                <button slot="ar-button" id="ar-button">
+                    View in your space
+                </button>
+                <div id="ar-prompt">
+                    <img src="./images/ar_hand_prompt.png">
+                </div>
+              </model-viewer> 
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script> 
+              <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
+
+              
+  
+              <script src="js/script.js"></script>
+              <div class="content-box">
+                <h1>Featured Content</h1>
+                <p>Xray slider box</p>
+    
+
+              </div>
+              <div class="image-placeholder">
+                IMAGE
+              </div>
+              
+
+
+            <footer class="site-footer">
+                <div class="footer-top">
+                  <div class="container">
+                    <div class="footer-brand">
+                      <a href="#">Echo buds pro</a>
+                    </div>
+                    <div class="footer-nav">
+                      <a href="#">About Us</a>
+                      <a href="#">Careers</a>
+                      <a href="#">Privacy Policy</a>
+                      <a href="#">Terms of Service</a>
+                      <a href="#">Contact Us</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer-bottom">
+                  <div class="container">
+                    <p>&copy; 2023 ear echo. All Rights Reserved.</p>
+                  </div>
+                </div>
+              </footer>
+              
+</body>
+</html>
+
+
