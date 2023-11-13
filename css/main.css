@@ -303,13 +303,13 @@ body, h1, ul, li, a, button {
     height: 100vh;
   }
   .image-right {
-    background: url(../assets/x-ray.jpg) no-repeat;
+    background: url(../images/x-ray.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
   }
   .image-left {
-    background: url(../assets/x-ray0021_0021.jpg) no-repeat;
+    background: url(../images/x-ray0021_0021.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
     width: 50%;
