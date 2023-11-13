@@ -381,14 +381,44 @@ body, h1, ul, li, a, button {
     color: #FFD700; /* Ensure visibility on smaller screens */
   }
 }
-.image-placeholder {
-  background-color: black; /* Black background */
-  color: yellow; /* Yellow text */
-  width: 100%; /* Full width of the container */
-  height: 200px; /* Fixed height, you can adjust this as needed */
+/* Promotion Section Styles */
+.promo-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4; /* Change as per your color scheme */
+}
+
+.promo-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.promo-images {
   display: flex;
-  justify-content: center; /* Center the text horizontally */
-  align-items: center; /* Center the text vertically */
-  font-size: 2em; /* Increase the text size */
-  margin: 20px 0; /* Add some margin to the top and bottom */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.promo-image-box {
+  flex: 1; /* Each box will grow to fill the space */
+  max-width: calc(50% - 10px); /* Adjusts box width to half of the container width minus gap */
+  border: 1px solid #ccc; /* Box border */
+  padding: 10px; /* Space around the image */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for depth */
+  overflow: hidden; /* Ensures the border-radius applies if images are larger */
+}
+
+.promo-img {
+  width: 100%;
+  height: auto;
+  display: block; /* Removes bottom space under the image */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .promo-image-box {
+    max-width: 100%; /* On smaller screens, each box takes full width */
+  }
 }/*# sourceMappingURL=main.css.map */

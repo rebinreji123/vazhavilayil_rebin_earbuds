@@ -28,11 +28,7 @@
     ];
     // functions
   
-    function modelLoaded() {
-      hotspots.forEach((hotspot) => {
-        hotspot.style.display = "block";
-      });
-    }
+   
   
     function loadInfo() {
       InfoBoxes.forEach((infoBox, index) => {
