@@ -69,3 +69,90 @@
     });
   })();
 
+  (() => {
+    const canvas = document.querySelector("#explode-view");
+    const context = canvas.getContext("2d");
+    canvas.width = 1920;
+    canvas.height = 1080;
+    const frameCount = 450;
+    const images = [];
+  
+    const buds = {
+      frame: 0,
+    };
+  
+    for (let i = 0; i < frameCount; i++) {
+      // console.log(i);
+      const img = new Image();
+      img.src = `images/vazhavilayil_rebin_animation_${(i + 1).toString().padStart(4, "0")}.webp`;
+      images.push(img);
+    }
+  
+    // console.log(images);
+  
+    //we are not animating a DOM element, but rather an object
+    gsap.to(buds, {
+      frame: 449,
+      snap: "frame",
+      scrollTrigger: {
+        trigger: "#explode-view",
+        pin: true,
+        scrub: 1,
+        markers: true,
+        start: "top top",
+      },
+      onUpdate: render,
+    });
+  
+    images[0].addEventListener("onload", render);
+  
+    function render() {
+      // console.log(buds.frame);
+      // console.log(images[buds.frame]);
+      context.clearRect(0, 0, canvas.width, canvas.height);
+      context.drawImage(images[buds.frame], 0, 0);
+    }
+  })();
+  
+
+
+  // x-ray slider 
+
+
+   // variables
+   let imageCon = document.querySelector('#imageCon'),
+   drag = document.querySelector('.image-drag'),
+   left = document.querySelector('.image-left'),
+   dragging = false,
+   min = 0,
+   max = imageCon.offsetWidth;
+
+// function
+function onDown() {
+   dragging = true;
+   console.log("on down Called");
+}
+
+function onUp() {
+   dragging = false;
+   console.log("on up Called");
+}
+
+function onMove(event) {
+   if (dragging === true) {
+       let x = event.clientX - imageCon.getBoundingClientRect().left;
+       if(x < min) {
+           x = min;
+       }else if(x > max){
+           x = max-4;
+       }
+
+       drag.style.left = x + "px";
+       left.style.width = x + "px"
+   }
+}
+
+// event listeners
+drag.addEventListener('mousedown', onDown);
+document.body.addEventListener('mouseup', onUp);
+document.body.addEventListener('mousemove', onMove);
