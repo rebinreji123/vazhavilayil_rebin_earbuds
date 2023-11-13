@@ -1,22 +1,54 @@
-.content-box {
-    background-color: #000; /* Black background for the content box */
-    color: #FFF; /* White text */
-    padding: 200px;
-    margin: 20px auto; /* Center the box */
-    width: 100%; /* The width of the box relative to its container */
-    max-width: 1400px; /* Maximum width of the box */
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Box shadow for visual depth */
-    border-radius: 8px; /* Rounded corners for the box */
-    font-family: 'Arial', sans-serif; /* Font style for the content */
+
+#outerShell{
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  
+  #mobile-tablet-view{
+      display: none;
+  }
+
+  #outerShell {
+      display: block;
+      max-width: 1200px;
+      border: solid 1px #666;
   }
   
-  h1 {
-    margin-top: 0;
-    font-size: 2.5em; /* Large font size for the main title */
+  #imageCon {
+      position: relative;
+      max-width: 1200px;
+      height: 100vh;
   }
   
-  p {
-    font-size: 1.1em; /* Slightly larger font size for the paragraph */
-    line-height: 1.6; /* Space out the lines for readability */
+  .slideImage {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 100vh;
   }
   
+  .image-right {
+      background: url(../assets/x-ray.jpg) no-repeat;
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+  }
+  
+  .image-left {
+      background: url(../assets/x-ray0021_0021.jpg) no-repeat;
+      background-size: cover;
+      background-position: center center;
+      width: 50%;
+      background-attachment: fixed;
+  }
+  
+  .image-drag {
+      background-color: #666;
+      left: 50%;
+      width: 4px;
+      cursor: pointer;
+  }
+  
+}
+
