@@ -116,41 +116,43 @@
   
 
 
-   // variables
-   let imageCon = document.querySelector('#imageCon'),
-   drag = document.querySelector('.image-drag'),
-   left = document.querySelector('.image-left'),
-   dragging = false,
-   min = 0,
-   max = imageCon.offsetWidth;
+  (() => {
 
-// function
-function onDown() {
-   dragging = true;
-   console.log("on down Called");
-}
+    // variables
+    let imageCon = document.querySelector('#imageCon'),
+        drag = document.querySelector('.image-drag'),
+        left = document.querySelector('.image-left'),
+        dragging = false,
+        min = 0,
+        max = imageCon.offsetWidth;
 
-function onUp() {
-   dragging = false;
-   console.log("on up Called");
-}
+    // function
+    function onDown() {
+        dragging = true;
+        console.log("on down Called");
+    }
 
-function onMove(event) {
-   if (dragging === true) {
-       let x = event.clientX - imageCon.getBoundingClientRect().left;
-       if(x < min) {
-           x = min;
-       }else if(x > max){
-           x = max-4;
-       }
+    function onUp() {
+        dragging = false;
+        console.log("on up Called");
+    }
 
-       drag.style.left = x + "px";
-       left.style.width = x + "px"
-   }
-}
+    function onMove(event) {
+        if (dragging === true) {
+            let x = event.clientX - imageCon.getBoundingClientRect().left;
+            if(x < min) {
+                x = min;
+            }else if(x > max){
+                x = max-4;
+            }
 
-// event listeners
-drag.addEventListener('mousedown', onDown);
-document.body.addEventListener('mouseup', onUp);
-document.body.addEventListener('mousemove', onMove);
-();
+            drag.style.left = x + "px";
+            left.style.width = x + "px"
+        }
+    }
+
+    // event listeners
+    drag.addEventListener('mousedown', onDown);
+    document.body.addEventListener('mouseup', onUp);
+    document.body.addEventListener('mousemove', onMove);
+})();
