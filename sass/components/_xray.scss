@@ -1,54 +1,53 @@
-
-#outerShell{
-  display: none;
-}
-
-@media screen and (min-width: 1200px) {
-  
-  #mobile-tablet-view{
-      display: none;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
   }
-
+  
+  h2, p {
+    margin-bottom: 30px;
+  }
+  
   #outerShell {
+    display: none;
+  }
+  
+  @media screen and (min-width: 1200px) {
+    #mobile-tablet-view {
+      display: none;
+    }
+    #outerShell {
       display: block;
       max-width: 1200px;
       border: solid 1px #666;
-  }
-  
-  #imageCon {
+    }
+    #imageCon {
       position: relative;
       max-width: 1200px;
       height: 100vh;
-  }
-  
-  .slideImage {
+    }
+    .slideImage {
       position: absolute;
       left: 0;
       right: 0;
       height: 100vh;
-  }
-  
-  .image-right {
+    }
+    .image-right {
       background: url(../images/x-ray.jpg) no-repeat;
       background-size: cover;
       background-position: center center;
       background-attachment: fixed;
-  }
-  
-  .image-left {
+    }
+    .image-left {
       background: url(../images/x-ray0021_0021.jpg) no-repeat;
       background-size: cover;
       background-position: center center;
       width: 50%;
       background-attachment: fixed;
-  }
-  
-  .image-drag {
+    }
+    .image-drag {
       background-color: #666;
       left: 50%;
       width: 4px;
       cursor: pointer;
+    }
   }
-  
-}
-
