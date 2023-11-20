@@ -116,9 +116,6 @@
   
 
 
-  // x-ray slider 
-
-
    // variables
    let imageCon = document.querySelector('#imageCon'),
    drag = document.querySelector('.image-drag'),
@@ -156,3 +153,4 @@ function onMove(event) {
 drag.addEventListener('mousedown', onDown);
 document.body.addEventListener('mouseup', onUp);
 document.body.addEventListener('mousemove', onMove);
+();
