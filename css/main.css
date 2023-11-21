@@ -278,28 +278,50 @@ body, h1, ul, li, a, button {
     margin-top: 10px;
   }
 }
-.content-box {
-  background-color: #000; /* Black background for the content box */
-  color: #FFF; /* White text */
-  padding: 200px;
-  margin: 20px auto; /* Center the box */
-  width: 100%; /* The width of the box relative to its container */
-  max-width: 1400px; /* Maximum width of the box */
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Box shadow for visual depth */
-  border-radius: 8px; /* Rounded corners for the box */
-  font-family: "Arial", sans-serif; /* Font style for the content */
+#outerShell {
+  display: none;
 }
 
-h1 {
-  margin-top: 0;
-  font-size: 2.5em; /* Large font size for the main title */
+@media screen and (min-width: 1200px) {
+  #mobile-tablet-view {
+    display: none;
+  }
+  #outerShell {
+    display: block;
+    max-width: 1200px;
+    border: solid 1px #666;
+  }
+  #imageCon {
+    position: relative;
+    max-width: 1200px;
+    height: 100vh;
+  }
+  .slideImage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100vh;
+  }
+  .image-right {
+    background: url(../images/x-ray.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+  .image-left {
+    background: url(../images/x-ray0021_0021.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: 50%;
+    background-attachment: fixed;
+  }
+  .image-drag {
+    background-color: #666;
+    left: 50%;
+    width: 4px;
+    cursor: pointer;
+  }
 }
-
-p {
-  font-size: 1.1em; /* Slightly larger font size for the paragraph */
-  line-height: 1.6; /* Space out the lines for readability */
-}
-
 .site-footer {
   background-color: #000000; /* Primary color: black */
   color: #FFFFFF; /* Tertiary color: white */
@@ -359,14 +381,44 @@ p {
     color: #FFD700; /* Ensure visibility on smaller screens */
   }
 }
-.image-placeholder {
-  background-color: black; /* Black background */
-  color: yellow; /* Yellow text */
-  width: 100%; /* Full width of the container */
-  height: 200px; /* Fixed height, you can adjust this as needed */
+/* Promotion Section Styles */
+.promo-section {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4; /* Change as per your color scheme */
+}
+
+.promo-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.promo-images {
   display: flex;
-  justify-content: center; /* Center the text horizontally */
-  align-items: center; /* Center the text vertically */
-  font-size: 2em; /* Increase the text size */
-  margin: 20px 0; /* Add some margin to the top and bottom */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.promo-image-box {
+  flex: 1; /* Each box will grow to fill the space */
+  max-width: calc(50% - 10px); /* Adjusts box width to half of the container width minus gap */
+  border: 1px solid #ccc; /* Box border */
+  padding: 10px; /* Space around the image */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds shadow for depth */
+  overflow: hidden; /* Ensures the border-radius applies if images are larger */
+}
+
+.promo-img {
+  width: 100%;
+  height: auto;
+  display: block; /* Removes bottom space under the image */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .promo-image-box {
+    max-width: 100%; /* On smaller screens, each box takes full width */
+  }
 }/*# sourceMappingURL=main.css.map */
